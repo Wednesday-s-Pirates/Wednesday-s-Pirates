@@ -27,3 +27,4 @@ Thumbs.db     # Windowsの画像キャッシュ（Winユーザーがいる場合
 # === buildフォルダ ===
 build/        # GradleやMaven使用時のビルド成果物（未使用でも保険）
 target/       # MavenやSpring Boot系のビルド先
+*.exe
