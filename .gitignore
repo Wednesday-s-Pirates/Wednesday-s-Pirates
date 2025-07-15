@@ -1,24 +1,29 @@
-# Compiled class file
-*.class
+# === Javaのビルド成果物を除外 ===
+*.class       # Javaコンパイルで生成されるバイトコード（Main.classなど）
+*.jar         # Javaアーカイブファイル（成果物）
+*.war         # Webアプリケーション成果物
+*.ear         # Java EE用アーカイブ
 
-# Log file
-*.log
+# === IDE（Eclipse）関係の除外 ===
+*.log         # ログファイル（開発中に出力される）
+bin/          # Eclipseのバイナリフォルダ（ビルド成果物）
+.settings/    # Eclipseの設定フォルダ
+.project      # Eclipseのプロジェクトファイル
+.classpath    # Eclipseのビルドパス設定ファイル
 
-# BlueJ files
-*.ctxt
+# === OS固有ファイル ===
+.DS_Store     # macOSのフォルダ設定ファイル（Macユーザーがいる場合）
+Thumbs.db     # Windowsの画像キャッシュ（Winユーザーがいる場合）
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# === その他（不要なファイルやディレクトリ）===
+*.iml         # IntelliJ IDEA用ファイル（将来IDE切り替えた時用）
+.idea/        # IntelliJのプロジェクト設定
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# === 実行ファイルや環境依存のファイル ===
+*.exe         # 実行ファイル（誤って上げないように）
+*.out         # 出力ファイル
+*.tmp         # 一時ファイル
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# === buildフォルダ ===
+build/        # GradleやMaven使用時のビルド成果物（未使用でも保険）
+target/       # MavenやSpring Boot系のビルド先
